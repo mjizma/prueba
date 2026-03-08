@@ -1,0 +1,100 @@
+/* Cargar fuentes personalizadas desde URLs absolutas */
+@font-face {
+    font-family: "handwriting";
+    src:
+      url("http://localhost/wordpress/wp-content/uploads/2025/fonts/journal-webfont.woff2") format("woff2"),
+      url("http://localhost/wordpress/wp-content/uploads/2025/fonts/journal-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal
+      }
+      @font-face {
+        font-family: "typewriter";
+        src:
+          url("http://localhost/wordpress/wp-content/uploads/2025/fonts/veteran_typewriter-webfont.woff2") format("woff2"),
+          url("http://localhost/wordpress/wp-content/uploads/2025/fonts/veteran_typewriter-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+ /* Estilo del formulario */
+ .wpcf7 form {
+    position: relative;
+    width: 740px;
+    height: 498px;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+    background: #fff url("http://localhost/wordpress/wp-content/uploads/2025/04/background.jpg");
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* columnas */
+    grid-template-rows: repeat(10, auto); /* filas */
+    column-gap: 20px;    
+    /* Borde fino */
+    border: 1px solid #ccc;    
+    /* Sombreado inferior y derecho */
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+    
+    /* Espacio adicional por encima y por debajo */
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+/* El mensaje ocupa toda la columna izquierda */
+.wpcf7-form p:nth-of-type(4) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 10; 
+    margin-bottom: 0;
+  }
+  
+  /* Tu nombre */
+  .wpcf7-form p:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5 ; /* empieza en fila 4 de 11 */
+    margin: 0;
+  }
+  
+  /* Tu correo debajo de tu nombre */
+  .wpcf7-form p:nth-of-type(2) {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    margin: 0;
+  }
+  
+  /* Asunto debajo del correo */
+  .wpcf7-form p:nth-of-type(3) {
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+    margin: 0;
+  }
+  
+  /* Botón */
+  .wpcf7-form p:nth-of-type(5) {
+    grid-column: 2 / 3;
+    grid-row: 8 / 9;
+    text-align: left;
+    margin-top: 10px;
+  }
+ /* Textarea (mensaje largo) estilo */
+ .wpcf7-textarea {
+    padding: 10px;
+    margin-left: -10px;
+    height: 90%;
+    border: none;
+    border-right: 1px solid;
+    overflow: auto;
+    font: 2em/2em "handwriting", cursive, sans-serif;
+  }
+  
+  /* Inputs */
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 textarea {
+    font: 1.5em/1.5em "handwriting", cursive, sans-serif;
+    border: none;
+    padding: 0 10px;
+    width: 100%;
+    background: none;
+    margin: 0;
+  }
+/* Etiquetas */
+.wpcf7 form label {
+    font: 1.5em "typewriter", sans-serif;
+  }

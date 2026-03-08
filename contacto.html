@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/formulario.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <script src="form.js" defer></script>
+    </head>
+    <body>
+      <header>
+        <div class="contenedor">
+          <img src="imagenes/icono.png" id="logo" alt="">
+          <h1>Arte fotográfico</h1>
+          <!--<input type="checkbox" id="menu-bar" /> no parece que tenga ninguna funcion-->
+          <!-- <label class="icon-menu" for="menu-bar"></label>-->
+          <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Blog</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+        </div>
+      </header>
+      <div class="postal">
+        <form id="contactForm" action="enviar.php" method="POST">
+          <h1>para: Arte fotográfico</h1>
+        
+          <div id="from">
+            <label for="name">de:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+        
+          <div id="reply">
+            <label for="mail">responder:</label>
+            <input type="email" id="mail" name="email" required>
+          </div>
+        
+          <div id="message">
+            <label for="msg">Tu mensaje:</label>
+            <textarea id="msg" name="message" required></textarea>
+          </div>
+        
+          <div class="button">
+            <button type="submit">Enviar tu mensaje</button>
+          </div>
+        </form>
+        </div>
+          
+              </body>
+</html>
